@@ -6,8 +6,8 @@ services:
       context: .
     ports:
       - "0.0.0.0:${PORT}:80"
-      - "0.0.0.0:8000:8000"
-      - "0.0.0.0:8001:8001"
+      - "0.0.0.0:${BACKEND_PORT}:8000"
+      - "0.0.0.0:${RESOURCE_PORT}:8001"
     env_file:
       - stack.env
     volumes:
